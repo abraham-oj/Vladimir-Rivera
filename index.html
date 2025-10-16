@@ -1,77 +1,126 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrategia Digital Élite | Una Demostración de Capacidad</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Vladimir Rivera | Actor</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="tsparticles"></div>
+<body class="overflow-x-hidden">
 
-    <header class="h-screen flex flex-col justify-center items-center text-center p-8 relative z-10">
-        <div class="reveal">
-            <img src="https://i.postimg.cc/pyYbZZxK/logoz.png" border="0" alt="logoz" class="w-28 h-28 mx-auto mb-6 rounded-full shadow-lg">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gold-main">Ecosistema Digital Inteligente</h1>
-            <p class="max-w-3xl mx-auto mt-6 text-lg md:text-xl text-gold-light">Una propuesta para transformar una presencia digital en un motor de crecimiento, inteligencia y automatización.</p>
+    <div id="particles-js"></div>
+
+    <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-4xl font-black" style="color: var(--color-primary-title);">VLADIMIR RIVERA</a>
+            <div class="hidden lg:flex items-center space-x-8 text-lg font-semibold">
+                <a href="#biografia" class="text-white hover:text-yellow-400 transition-colors">Biografía</a>
+                <a href="#filmografia" class="text-white hover:text-yellow-400 transition-colors">Filmografía</a>
+                <a href="#contacto" class="text-white hover:text-yellow-400 transition-colors">Contacto</a>
+                 <div class="flex items-center bg-gray-800 rounded-md">
+                    <input type="text" placeholder="Buscar..." class="bg-transparent text-white placeholder-gray-400 py-2 px-4 focus:outline-none w-48">
+                </div>
+            </div>
+            <button id="mobile-menu-button" class="lg:hidden text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/90">
+            <a href="#biografia" class="block py-3 px-6 text-white text-center">Biografía</a>
+            <a href="#filmografia" class="block py-3 px-6 text-white text-center">Filmografía</a>
+            <a href="#contacto" class="block py-3 px-6 text-white text-center">Contacto</a>
         </div>
     </header>
 
-    <main class="relative z-10 px-6 md:px-12 lg:px-24">
-
-        <section class="py-20 max-w-5xl mx-auto">
-            <div class="text-center reveal">
-                <h2 class="text-4xl md:text-5xl font-bold text-gold-main">Los 3 Pilares de la Estrategia Élite</h2>
-                <p class="mt-4 text-lg text-gray-400">Una sinergia de tecnología para obtener resultados tangibles.</p>
-            </div>
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
-                <div class="card reveal reveal-delay-1">
-                    <h3 class="font-display text-2xl text-gold-main">Inteligencia de Negocios</h3>
-                    <p class="mt-4 text-gray-300">Convertimos datos en decisiones. Creamos dashboards en tiempo real y aplicamos IA para descubrir patrones y predecir tendencias de clientes.</p>
-                </div>
-                <div class="card reveal reveal-delay-2">
-                    <h3 class="font-display text-2xl text-gold-main">Experiencia de Cliente</h3>
-                    <p class="mt-4 text-gray-300">Automatizamos la personalización. Desde asistentes virtuales en WhatsApp hasta sistemas de reserva online que funcionan 24/7.</p>
-                </div>
-                <div class="card reveal reveal-delay-3">
-                    <h3 class="font-display text-2xl text-gold-main">Optimización Continua</h3>
-                    <p class="mt-4 text-gray-300">Aseguramos el máximo rendimiento. Monitoreamos la velocidad y seguridad proactivamente, y aplicamos estrategias SEO avanzadas para un crecimiento orgánico.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 text-center">
-            <div class="reveal">
-                <h2 class="text-4xl md:text-5xl font-bold text-gold-main">Demostración: Análisis Predictivo</h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Esto es un ejemplo visual de cómo podemos analizar los datos de sus negocios para obtener información valiosa. (Datos de simulación).</p>
-            </div>
-            <div id="analysis-section" class="mt-12 grid lg:grid-cols-2 gap-12 items-center reveal">
-                <div class="chart-container">
-                     <canvas id="barChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <canvas id="doughnutChart"></canvas>
-                </div>
-            </div>
-        </section>
+    <main class="container mx-auto px-6 py-12">
         
-        <section class="py-20 max-w-2xl mx-auto text-center">
-            <div class="reveal">
-                <h2 class="text-4xl md:text-5xl font-bold text-gold-main">Mantenimiento y Crecimiento</h2>
-                <p class="mt-4 text-lg text-gray-400">Para asegurar que el ecosistema digital no solo se mantenga saludable, sino que evolucione y mejore constantemente, se ofrece un servicio de optimización continua.</p>
-                <div class="mt-8 bg-black bg-opacity-30 border border-gold-dark p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold font-display text-gold-light">Servicio de Optimización Continua</h3>
-                    <p class="text-5xl font-bold my-6 text-gold-main">$15,000 <span class="text-lg text-gray-400">MXN / mes</span></p>
-                    <p class="text-gray-300">Incluye monitoreo proactivo de rendimiento, estrategia de contenido SEO y reportes de inteligencia de negocios.</p>
+        <section id="biografia" class="pt-12 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="bg-neutral-support-dark rounded-lg p-2" style="background-color: var(--color-neutral-support-dark);">
+                         <div class="w-full h-auto rounded-md overflow-hidden flex items-center justify-center border-4" style="border-color: var(--color-primary-title-dark); background-color: var(--color-neutral-support);">
+                            <span class="text-4xl py-48" style="color: var(--color-general-text);">AQUÍ VA TU FOTO</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h2 class="text-4xl" style="color:var(--color-primary-title-light)">Vladimir Rivera</h2>
+                        <p class="text-lg text-gray-300">Actor</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                     <h3 class="text-4xl mb-4 imdb-accent-bar">Actuación Destacada</h3>
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl interactive-element" style="border: 2px solid var(--color-primary-title);">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/-aCSQJRm7t8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                     <h3 class="text-4xl mt-12 mb-4 imdb-accent-bar">Galería</h3>
+                    <div class="gallery-scroll flex space-x-4 overflow-x-auto pb-4">
+                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+1" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+2" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+3" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+4" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                    </div>
                 </div>
             </div>
+            <div class="mt-12 text-lg text-gray-300 reveal">
+                <h3 class="text-4xl mb-4 imdb-accent-bar">Biografía</h3>
+                <p>Vladimir Rivera ha dedicado su vida al arte de la actuación, cautivando audiencias con su versatilidad y pasión. Desde sus inicios en el teatro independiente hasta sus aclamadas interpretaciones en la pantalla grande, su presencia escénica y su profunda conexión con cada personaje lo han convertido en una figura emblemática. Su capacidad para transmitir emociones complejas y su compromiso con la verdad artística son el sello distintivo de su carrera.</p>
+            </div>
+        </section>
+
+        <section id="filmografia" class="py-20 reveal">
+            <h2 class="text-5xl mb-8 imdb-accent-bar">Filmografía</h2>
+            <div class="bg-neutral-support-dark p-6 rounded-lg" style="background-color: var(--color-neutral-support-dark);">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-3 gap-4 p-4 border-b border-gray-700">
+                        <span class="font-bold text-xl col-span-2">Título de la Obra 1</span>
+                        <span class="text-right text-gray-400">2025</span>
+                    </div>
+                     <div class="grid grid-cols-3 gap-4 p-4 border-b border-gray-700">
+                        <span class="font-bold text-xl col-span-2">Título de la Obra 2</span>
+                        <span class="text-right text-gray-400">2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 reveal">
+            <h2 class="text-5xl mb-8 imdb-accent-bar">Más Videos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="interactive-element">
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder" frameborder="0"></iframe><div class="absolute inset-0 flex items-center justify-center bg-black/70 text-2xl font-bold">AQUÍ IRÍAN TUS VIDEOS</div></div>
+                    <h4 class="mt-4 text-2xl">Primeros Trabajos</h4>
+                </div>
+                <div class="interactive-element">
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/9j6RDRNpclg" frameborder="0" allowfullscreen></iframe></div>
+                    <h4 class="mt-4 text-2xl">Interpretación Impactante</h4>
+                </div>
+                <div class="interactive-element">
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder" frameborder="0"></iframe><div class="absolute inset-0 flex items-center justify-center bg-black/70 text-2xl font-bold">¿SÍ O NO?</div></div>
+                    <h4 class="mt-4 text-2xl">¿Próximo Proyecto?</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-20 text-center reveal">
+            <h2 class="text-5xl mb-6">¿Listo para Colaborar?</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8">Si te interesa el talento de Vladimir Rivera para tu próximo proyecto, no dudes en ponerte en contacto.</p>
+            <a href="mailto:contact@vladimirivera.com" class="btn">Enviar Mensaje</a>
         </section>
 
     </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <footer class="py-10 text-center border-t" style="border-color: var(--color-neutral-support-light);">
+        <p class="text-gray-400">&copy; 2025 Vladimir Rivera. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
