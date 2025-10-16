@@ -1,79 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
-
 :root {
-    --bg-color: #000000;
-    --gold-main: #D4AF37;
-    --gold-light: #F0E68C;
-    --gold-dark: #a88a2c;
-    --text-color: #e0e0e0;
-    --purple-glow: #8A2BE2;
+    --color-primary-bg: #02000E;
+    --color-primary-title: #C9A227;
+    --color-general-text: #F5FFF5;
+    --color-secondary-blue: #0F4B9D;
+    --color-link-accent: #2828A0;
+    --color-neutral-support: #2E2E2E;
+    --color-primary-title-light: #F1D302;
+    --color-primary-title-dark: #8C6E1A;
+    --color-link-accent-light: #4C4CFF;
+    --color-neutral-support-light: #5A5A5A;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    background-color: var(--color-primary-bg);
+    color: var(--color-general-text);
+    font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, .font-display {
-    font-family: 'Playfair Display', serif;
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    color: var(--color-primary-title);
 }
 
-#tsparticles {
+#particles-js {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
-.text-gold-main { color: var(--gold-main); }
-.text-gold-light { color: var(--gold-light); }
-.border-gold-dark { border-color: var(--gold-dark); }
-
-header, main {
-    position: relative;
-    z-index: 10;
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary-title);
+    color: var(--color-primary-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
 }
 
-header h1 {
-    text-shadow: 0 0 15px var(--gold-main);
+.btn:hover {
+    background-color: var(--color-primary-title-light);
+    box-shadow: 0 0 15px var(--color-primary-title-light);
+    transform: translateY(-2px);
 }
 
-.card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--gold-dark);
-    padding: 2rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-}
-
-.chart-container {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--gold-dark);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(10px);
-}
-
-
-/* --- Animaciones de Scroll --- */
+/* Enhanced Animations */
 .reveal {
     opacity: 0;
-    transform: scale(0.95) translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    filter: blur(8px);
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
 }
-.reveal.is-visible {
+
+.reveal.visible {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    filter: blur(0);
+    transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.2s; }
-.reveal-delay-2 { transition-delay: 0.4s; }
-.reveal-delay-3 { transition-delay: 0.6s; }
+
+.interactive-element:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* IMDb-inspired yellow accents */
+.imdb-accent-bar {
+    border-left: 4px solid var(--color-primary-title-light);
+    padding-left: 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #01010A; }
+::-webkit-scrollbar-thumb { background: var(--color-primary-title-dark); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary-title); }
+
+/* Gallery Scrollbar */
+.gallery-scroll::-webkit-scrollbar { height: 6px; }
+.gallery-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-support-light); }
