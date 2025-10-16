@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -21,11 +21,8 @@
             <a href="#" class="text-4xl font-black" style="color: var(--color-primary-title);">VLADIMIR RIVERA</a>
             <div class="hidden lg:flex items-center space-x-8 text-lg font-semibold">
                 <a href="#biografia" class="text-white hover:text-yellow-400 transition-colors">Biografía</a>
-                <a href="#filmografia" class="text-white hover:text-yellow-400 transition-colors">Filmografía</a>
+                <a href="#trabajos" class="text-white hover:text-yellow-400 transition-colors">Trabajos</a>
                 <a href="#contacto" class="text-white hover:text-yellow-400 transition-colors">Contacto</a>
-                 <div class="flex items-center bg-gray-800 rounded-md">
-                    <input type="text" placeholder="Buscar..." class="bg-transparent text-white placeholder-gray-400 py-2 px-4 focus:outline-none w-48">
-                </div>
             </div>
             <button id="mobile-menu-button" class="lg:hidden text-white">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -33,7 +30,7 @@
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden bg-black/90">
             <a href="#biografia" class="block py-3 px-6 text-white text-center">Biografía</a>
-            <a href="#filmografia" class="block py-3 px-6 text-white text-center">Filmografía</a>
+            <a href="#trabajos" class="block py-3 px-6 text-white text-center">Trabajos</a>
             <a href="#contacto" class="block py-3 px-6 text-white text-center">Contacto</a>
         </div>
     </header>
@@ -41,11 +38,11 @@
     <main class="container mx-auto px-6 py-12">
         
         <section id="biografia" class="pt-12 reveal">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                 <div class="lg:col-span-1">
                     <div class="bg-neutral-support-dark rounded-lg p-2" style="background-color: var(--color-neutral-support-dark);">
                          <div class="w-full h-auto rounded-md overflow-hidden flex items-center justify-center border-4" style="border-color: var(--color-primary-title-dark); background-color: var(--color-neutral-support);">
-                            <span class="text-4xl py-48" style="color: var(--color-general-text);">AQUÍ VA TU FOTO</span>
+                             <span class="text-4xl py-48" style="color: var(--color-general-text);">FOTO PRINCIPAL</span>
                         </div>
                     </div>
                     <div class="mt-6 text-center">
@@ -55,69 +52,56 @@
                 </div>
 
                 <div class="lg:col-span-2">
-                     <h3 class="text-4xl mb-4 imdb-accent-bar">Actuación Destacada</h3>
+                     <h3 class="text-4xl mb-4 imdb-accent-bar">Demo Reel</h3>
                     <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl interactive-element" style="border: 2px solid var(--color-primary-title);">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/-aCSQJRm7t8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                     <h3 class="text-4xl mt-12 mb-4 imdb-accent-bar">Galería</h3>
-                    <div class="gallery-scroll flex space-x-4 overflow-x-auto pb-4">
-                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+1" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
-                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+2" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
-                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+3" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
-                        <img src="https://placehold.co/400x300/141414/BFBFBF?text=Trabajo+4" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/C1iJ-TWGmNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
             <div class="mt-12 text-lg text-gray-300 reveal">
-                <h3 class="text-4xl mb-4 imdb-accent-bar">Biografía</h3>
-                <p>Vladimir Rivera ha dedicado su vida al arte de la actuación, cautivando audiencias con su versatilidad y pasión. Desde sus inicios en el teatro independiente hasta sus aclamadas interpretaciones en la pantalla grande, su presencia escénica y su profunda conexión con cada personaje lo han convertido en una figura emblemática. Su capacidad para transmitir emociones complejas y su compromiso con la verdad artística son el sello distintivo de su carrera.</p>
+                <h3 class="text-4xl mb-4 imdb-accent-bar">Remembranza</h3>
+                <p>Actor con una sólida formación en el Centro de Formación de Actores para la Televisión (CEFAT) y una trayectoria que abarca cine, televisión y teatro. Vladimir ha demostrado una notable capacidad para sumergirse en personajes complejos, desde roles de acción en producciones como "Narcos" hasta interpretaciones dramáticas en proyectos como "Correr para Vivir". Su compromiso con el arte y su disciplina lo definen como un talento versátil y en constante evolución.</p>
             </div>
         </section>
 
-        <section id="filmografia" class="py-20 reveal">
-            <h2 class="text-5xl mb-8 imdb-accent-bar">Filmografía</h2>
-            <div class="bg-neutral-support-dark p-6 rounded-lg" style="background-color: var(--color-neutral-support-dark);">
-                <div class="space-y-4">
-                    <div class="grid grid-cols-3 gap-4 p-4 border-b border-gray-700">
-                        <span class="font-bold text-xl col-span-2">Título de la Obra 1</span>
-                        <span class="text-right text-gray-400">2025</span>
+        <section id="trabajos" class="py-20 reveal">
+            <h2 class="text-5xl mb-8 imdb-accent-bar">Trabajos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="interactive-element">
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg" style="border: 1px solid var(--color-primary-title-dark);">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/WSj2qWZZu-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                     <div class="grid grid-cols-3 gap-4 p-4 border-b border-gray-700">
-                        <span class="font-bold text-xl col-span-2">Título de la Obra 2</span>
-                        <span class="text-right text-gray-400">2024</span>
-                    </div>
+                    <h4 class="mt-4 text-2xl">Correr para Vivir</h4>
                 </div>
-            </div>
+                <div class="interactive-element">
+                   <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg" style="border: 1px solid var(--color-primary-title-dark);">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/1oGTpknZpqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="mt-4 text-2xl">Narcos</h4>
+                </div>
+                </div>
         </section>
-
-        <section class="py-20 reveal">
-            <h2 class="text-5xl mb-8 imdb-accent-bar">Más Videos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="interactive-element">
-                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder" frameborder="0"></iframe><div class="absolute inset-0 flex items-center justify-center bg-black/70 text-2xl font-bold">AQUÍ IRÍAN TUS VIDEOS</div></div>
-                    <h4 class="mt-4 text-2xl">Primeros Trabajos</h4>
-                </div>
-                <div class="interactive-element">
-                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/9j6RDRNpclg" frameborder="0" allowfullscreen></iframe></div>
-                    <h4 class="mt-4 text-2xl">Interpretación Impactante</h4>
-                </div>
-                <div class="interactive-element">
-                    <div class="relative w-full aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/placeholder" frameborder="0"></iframe><div class="absolute inset-0 flex items-center justify-center bg-black/70 text-2xl font-bold">¿SÍ O NO?</div></div>
-                    <h4 class="mt-4 text-2xl">¿Próximo Proyecto?</h4>
-                </div>
+        
+        <section class="py-12 reveal">
+            <h3 class="text-4xl mt-12 mb-4 imdb-accent-bar">Galería Fotográfica</h3>
+            <div class="gallery-scroll flex space-x-4 overflow-x-auto pb-4">
+                <img src="https://placehold.co/400x300/141414/BFBFBF?text=Foto+1" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                <img src="https://placehold.co/400x300/141414/BFBFBF?text=Foto+2" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                <img src="https://placehold.co/400x300/141414/BFBFBF?text=Foto+3" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
+                <img src="https://placehold.co/400x300/141414/BFBFBF?text=Foto+4" class="rounded-md w-64 h-40 object-cover flex-shrink-0 interactive-element">
             </div>
         </section>
 
         <section id="contacto" class="py-20 text-center reveal">
             <h2 class="text-5xl mb-6">¿Listo para Colaborar?</h2>
-            <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8">Si te interesa el talento de Vladimir Rivera para tu próximo proyecto, no dudes en ponerte en contacto.</p>
+            <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8">Si te interesa el talento de Vladimir Rivera para tu próximo proyecto, no dudes in ponerte en contacto.</p>
             <a href="mailto:contact@vladimirivera.com" class="btn">Enviar Mensaje</a>
         </section>
 
     </main>
 
     <footer class="py-10 text-center border-t" style="border-color: var(--color-neutral-support-light);">
-        <p class="text-gray-400">&copy; 2025 Vladimir Rivera. Todos los derechos reservados.</p>
+        <p class="text-gray-400">&copy; 2025 Vladimir Rivera. Todos los derechos reservados, .</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
