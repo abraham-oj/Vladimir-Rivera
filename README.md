@@ -1,2 +1,2 @@
-# Tiororoo
-Simple ejemplo 
+# Vladimir Rivera, de Taquero Actor
+:) 
