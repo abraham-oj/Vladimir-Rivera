@@ -1,7 +1,34 @@
-// Configuración de Particles.js para el fondo animado
+// ===== NUEVA CONFIGURACIÓN DE PARTICLES.JS (Polvo de Estrellas Doradas) =====
 particlesJS("particles-js", {
-    "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#C9A227" }, "shape": { "type": "star" }, "opacity": { "value": 0.4, "random": true, "anim": { "enable": true, "speed": 0.8, "opacity_min": 0, "sync": false } }, "size": { "value": 2.5, "random": true }, "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out" } },
-    "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false } } },
+    "particles": {
+        "number": {
+            "value": 160, // Aumentamos la cantidad de partículas
+            "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#C9A227" }, // Mantenemos el color dorado
+        "shape": { "type": "star" }, // Mantenemos la forma de estrella
+        "opacity": {
+            "value": 0.7, // Aumentamos la opacidad para que sean más visibles
+            "random": true,
+            "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+        },
+        "size": {
+            "value": 3, // Hacemos las estrellas un poco más grandes
+            "random": true
+        },
+        "move": {
+            "enable": true,
+            "speed": 1.5, // Aumentamos la velocidad de movimiento
+            "direction": "none", "random": true, "straight": false, "out_mode": "out"
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": { "enable": true, "mode": "repulse" }, // Efecto interactivo al pasar el mouse
+            "onclick": { "enable": true, "mode": "push" }
+        }
+    },
     "retina_detect": true
 });
 
@@ -21,3 +48,22 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Lógica para el Modal (Lightbox) de las galerías
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+function openModal(imageUrl) {
+    modal.style.display = "flex";
+    modalImage.src = imageUrl;
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
