@@ -13,14 +13,23 @@
 
 body {
     background-color: var(--color-primary-bg);
+    /* Fuente principal para el cuerpo */
     color: var(--color-general-text);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Cinzel', serif;
+    /* Fuente para títulos */
+    font-family: 'Roboto Condensed', sans-serif;
     color: var(--color-primary-title);
 }
+
+/* Si quieres usar Roboto Mono para código o elementos específicos, puedes añadirlo así: */
+/*
+.codigo-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+*/
 
 #particles-js {
     position: fixed;
@@ -38,7 +47,7 @@ h1, h2, h3, h4 {
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
     font-weight: bold;
-    font-family: 'Cinzel', serif;
+    font-family: 'Roboto Condensed', sans-serif; /* Usando Roboto Condensed para botones */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all 0.3s ease;
